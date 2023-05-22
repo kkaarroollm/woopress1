@@ -66,12 +66,12 @@ define('DB_PASSWORD', $dbPassword);
 define( 'DB_HOST', getenv('MYSQL_HOST') );
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', getenv('WORDPRESS_DB_CHARSET') );
+define( 'DB_CHARSET', 'utf8' );
 
 /** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', getenv('WORDPRESS_DB_COLLATE' ));
+define( 'DB_COLLATE', '');
 
-define('DB_PORT', getenv('MYSQL_PORT'));
+define('DB_PORT', 3306);
 
 /**#@+
  * Authentication unique keys and salts.
