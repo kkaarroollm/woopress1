@@ -56,15 +56,15 @@ define( 'DB_PASSWORD', getenv_docker('MYSQL_PASSWORD', 'password') );
  */
 
 /** Database hostname */
-define( 'DB_HOST', getenv_docker('MYSQL_HOST', 'mysql') );
+define( 'DB_HOST', getenv('MYSQL_HOST', 'mysql') );
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', getenv_docker('WORDPRESS_DB_CHARSET', 'utf8') );
+define( 'DB_CHARSET', getenv('WORDPRESS_DB_CHARSET', 'utf8') );
 
 /** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', getenv_docker('WORDPRESS_DB_COLLATE', '') );
+define( 'DB_COLLATE', getenv('WORDPRESS_DB_COLLATE', '') );
 
-define('DB_PORT', getenv_docker('MYSQL_PORT', '3306'));
+define('DB_PORT', getenv('MYSQL_PORT', '3306'));
 
 /**#@+
  * Authentication unique keys and salts.
