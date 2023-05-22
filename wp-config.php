@@ -41,13 +41,13 @@ if (!function_exists('getenv_docker')) {
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', getenv('MYSQL_DATABASE', 'wordpress') );
+define( 'DB_NAME', getenv('MYSQL_DATABASE') );
 
 /** Database username */
-define( 'DB_USER', getenv('MYSQL_USER', 'wordpress') );
+define( 'DB_USER', getenv('MYSQL_USER') );
 
 /** Database password */
-define( 'DB_PASSWORD', getenv('MYSQL_PASSWORD', 'password') );
+define( 'DB_PASSWORD', getenv('MYSQL_PASSWORD') );
 
 /**
  * Docker image fallback values above are sourced from the official WordPress installation wizard:
@@ -56,15 +56,15 @@ define( 'DB_PASSWORD', getenv('MYSQL_PASSWORD', 'password') );
  */
 
 /** Database hostname */
-define( 'DB_HOST', getenv('MYSQL_HOST', 'mysql') );
+define( 'DB_HOST', getenv('MYSQL_HOST') );
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', getenv('WORDPRESS_DB_CHARSET', 'utf8') );
+define( 'DB_CHARSET', getenv('WORDPRESS_DB_CHARSET') );
 
 /** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', getenv('WORDPRESS_DB_COLLATE', '') );
+define( 'DB_COLLATE', getenv('WORDPRESS_DB_COLLATE' );
 
-define('DB_PORT', getenv('MYSQL_PORT', '3306'));
+define('DB_PORT', getenv('MYSQL_PORT'));
 
 /**#@+
  * Authentication unique keys and salts.
