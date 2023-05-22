@@ -62,7 +62,7 @@ define( 'DB_HOST', getenv('MYSQL_HOST') );
 define( 'DB_CHARSET', getenv('WORDPRESS_DB_CHARSET') );
 
 /** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', getenv('WORDPRESS_DB_COLLATE' );
+define( 'DB_COLLATE', getenv('WORDPRESS_DB_COLLATE' ));
 
 define('DB_PORT', getenv('MYSQL_PORT'));
 
