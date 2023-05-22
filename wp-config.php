@@ -71,6 +71,8 @@ define( 'DB_CHARSET', 'utf8' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '');
 
+define('MYSQL_ATTR_SSL_CA', '/etc/ssl/cert.pem');
+
 define('DB_PORT', 3306);
 
 /**#@+
