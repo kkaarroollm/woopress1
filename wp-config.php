@@ -41,13 +41,20 @@ if (!function_exists('getenv_docker')) {
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', getenv('MYSQL_DATABASE') );
+$dbName = getenv('MYSQL_DATABASE');
+error_log("Database Name: " . $dbName);
+define('DB_NAME', $dbName);
 
 /** Database username */
-define( 'DB_USER', getenv('MYSQL_USER') );
+$dbUser = getenv('MYSQL_USER');
+error_log("Database User: " . $dbUser);
+define('DB_USER', $dbUser);
 
 /** Database password */
-define( 'DB_PASSWORD', getenv('MYSQL_PASSWORD') );
+$dbPassword = getenv('MYSQL_PASSWORD');
+error_log("Database Password: " . $dbPassword);
+define('DB_PASSWORD', $dbPassword);
+
 
 /**
  * Docker image fallback values above are sourced from the official WordPress installation wizard:
