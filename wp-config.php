@@ -64,6 +64,8 @@ define( 'DB_CHARSET', getenv_docker('WORDPRESS_DB_CHARSET', 'utf8') );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', getenv_docker('WORDPRESS_DB_COLLATE', '') );
 
+define('DB_PORT', getenv_docker('MYSQL_PORT', '3306'));
+
 /**#@+
  * Authentication unique keys and salts.
  *
