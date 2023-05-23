@@ -94,25 +94,24 @@ function display_birthdays_page() {
             </thead>
             <tbody>
                 <?php
-                $customers = get_users(array('role' => 'customer'));
-                foreach ($customers as $customer) {
-                    $user_id = $customer->ID;
-                    $birthday = get_user_meta($user_id, 'random_birthday', true);
-                    $email_sent_14days = get_user_meta($user_id, 'birthday_email_sent_14days', true);
-                    $email_sent_2days = get_user_meta($user_id, 'birthday_email_sent_2days', true);
-                    $email_sent_birthday = get_user_meta($user_id, 'birthday_email_sent_birthday', true);
+                $users = get_users(array('role' => 'customer'));
+                foreach ($users as $user) {
+                    $user_id = $user->ID;
+                    $birthday = get_user_meta($user_id, 'birthday', true);
+                    $birthday_email_sent_14days = get_user_meta($user_id, 'birthday_email_sent_14days', true);
+                    $birthday_email_sent_2days = get_user_meta($user_id, 'birthday_email_sent_2days', true);
+                    $birthday_email_sent_birthday = get_user_meta($user_id, 'birthday_email_sent_birthday', true);
 
-                    $username = $customer->user_login;
-                    $name = $customer->first_name . ' ' . $customer->last_name;
-                    $birthday = $customer->birthday;
+                    $username = $user->user_login;
+                    $name = $user->first_name . ' ' . $user->last_name;
                     ?>
                     <tr>
                         <td><?php echo esc_html($username); ?></td>
                         <td><?php echo esc_html($name); ?></td>
                         <td><?php echo esc_html($birthday); ?></td>
-                        <td><?php echo $email_sent_14days ? __('Sent', 'custom-woocommerce-fields') : __('Not Sent', 'custom-woocommerce-fields'); ?></td>
-                        <td><?php echo $email_sent_2days ? __('Sent', 'custom-woocommerce-fields') : __('Not Sent', 'custom-woocommerce-fields'); ?></td>
-                        <td><?php echo $email_sent_birthday ? __('Sent', 'custom-woocommerce-fields') : __('Not Sent', 'custom-woocommerce-fields'); ?></td>
+                        <td><?php echo $birthday_email_sent_14days ? __('Sent', 'custom-woocommerce-fields') : __('Not Sent', 'custom-woocommerce-fields'); ?></td>
+                        <td><?php echo $birthday_email_sent_2days ? __('Sent', 'custom-woocommerce-fields') : __('Not Sent', 'custom-woocommerce-fields'); ?></td>
+                        <td><?php echo $birthday_email_sent_birthday ? __('Sent', 'custom-woocommerce-fields') : __('Not Sent', 'custom-woocommerce-fields'); ?></td>
                     </tr>
                     <?php
                 }
