@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Custom Order Generator
-Description: generate 5 orders hourly with 5 products
+Description: generate 5 orders daily with 5 products
 */
 
 
@@ -9,9 +9,8 @@ register_activation_hook(__FILE__, 'start_custom_order_generation');
 
 
 function start_custom_order_generation() {
-    // schedule the custom order generation to run every hour
     if (!wp_next_scheduled('custom_order_generation_event')) {
-        wp_schedule_event(time(), 'hourly', 'custom_order_generation_event');
+        wp_schedule_event(time(), 'daily', 'custom_order_generation_event');
     }
 
     add_action('custom_order_generation_event', 'create_custom_orders');
