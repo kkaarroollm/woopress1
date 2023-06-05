@@ -222,7 +222,7 @@ function custom_order_generation_settings_page_content() {
                         <input type="text" id="custom_order_generation_birthday_reminder_subject" name="custom_order_generation_birthday_reminder_subject" value="<?php echo esc_attr(get_option('custom_order_generation_birthday_reminder_subject', 'Birthday Reminder')); ?>" />
                         <br />
                         <label for="custom_order_generation_birthday_reminder_content">Content:</label>
-                        <textarea id="custom_order_generation_birthday_reminder_content" name="custom_order_generation_birthday_reminder_content" rows="5"><?php echo esc_textarea(get_option('custom_order_generation_birthday_reminder_content', 'Dear {first_name},\n\nJust a reminder that your birthday is coming up on {birthday}. Enjoy your special day!\n\nBest regards,\nThe Admin Team')); ?></textarea>
+                        <textarea id="custom_order_generation_birthday_reminder_content" name="custom_order_generation_birthday_reminder_content" rows="5"><?php echo esc_textarea(get_option('custom_order_generation_birthday_reminder_content', 'Hello {first_name}, Happy Birthday')); ?></textarea>
                     </td>
                 </tr>
             </table>
